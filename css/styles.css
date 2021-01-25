@@ -33,21 +33,19 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 
 .wrapper {
     background-position-y: center;
-    padding-bottom: 30em;
+    padding-bottom: 15em;
     position: relative;
 }
 
-.wrapper header figure {
-    margin: 0;
-    width: 16.9em;
-}
-
-.wrapper header figure img {
+.wrapper .content {
+    margin: 0 auto;
+    max-width: 1520px;
     width: 100%;
 }
 
 .wrapper svg {
     display: block;
+    z-index: -1;
 
     position: absolute;
     bottom: 0;
@@ -57,13 +55,19 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 /* Estilos para la barra de navegacion*/
 
 .wrapper header {
-    margin: 0 auto;
-    max-width: 1520px;
-    width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.wrapper header figure {
+    margin: 0;
+    width: 16.9em;
+}
+
+.wrapper header figure img {
+    width: 100%;
 }
 
 .wrapper header nav ul {
@@ -76,13 +80,36 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 .wrapper header nav ul li a {
     color: hsl(0, 100%, 100%);
     font-weight: bold;
-    margin-right: 1em;
-    padding: .5em 1em;
+    padding: 1em;
+    position: relative;
     text-decoration: none;
 }
 
-.wrapper header nav ul li .active {
-    border-bottom: 5px solid  hsl(0, 100%, 100%);
+.wrapper header nav ul li a::before {
+    content: '';
+
+    background: hsl(0, 100%, 100%);
+    height: 5px;
+    transition: .2s all ease-out;
+    width: 0;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+.wrapper header nav ul li a:hover::before,
+.wrapper header nav ul li .active::before  {
+    left: 0;
+    width: 100%;
 }
 
 /* Estilos para el titulo principal*/
+
+.wrapper h1 {
+    color: hsla(0, 100%, 100%);
+    font-family: 'Comfortaa', cursive;
+    font-size: 4em;
+    margin-top: 2em;
+    width: 75%;
+}
