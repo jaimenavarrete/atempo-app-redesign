@@ -1,0 +1,88 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+/****************************************
+ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
+****************************************/
+
+/* ESTILOS PARA LOS CONTENEDORES CON IMAGENES DE FONDO*/
+
+.background-container {
+    background: url('../img/img-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+/* Estilos para el coloreado*/
+
+.background-container::before {
+    content: '';
+
+    background: hsla(300, 100%, 25%, .5);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wrapper {
+    background-position-y: center;
+    padding-bottom: 30em;
+    position: relative;
+}
+
+.wrapper header figure {
+    margin: 0;
+    width: 16.9em;
+}
+
+.wrapper header figure img {
+    width: 100%;
+}
+
+.wrapper svg {
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Estilos para la barra de navegacion*/
+
+.wrapper header {
+    margin: 0 auto;
+    max-width: 1520px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper header nav ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper header nav ul li a {
+    color: hsl(0, 100%, 100%);
+    font-weight: bold;
+    margin-right: 1em;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.wrapper header nav ul li .active {
+    border-bottom: 5px solid  hsl(0, 100%, 100%);
+}
+
+/* Estilos para el titulo principal*/
