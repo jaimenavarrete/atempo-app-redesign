@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /****************************************
@@ -33,7 +33,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 
 .wrapper {
     background-position-y: center;
-    padding-bottom: 15em;
+    padding-bottom: 12em;
     position: relative;
 }
 
@@ -80,6 +80,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 .wrapper header nav ul li a {
     color: hsl(0, 100%, 100%);
     font-weight: bold;
+    font-size: .9em;
     padding: 1em;
     position: relative;
     text-decoration: none;
@@ -90,7 +91,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 
     background: hsl(0, 100%, 100%);
     height: 5px;
-    transition: .2s all ease-out;
+    transition: .3s all ease-out;
     width: 0;
 
     position: absolute;
@@ -110,6 +111,46 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
     color: hsla(0, 100%, 100%);
     font-family: 'Comfortaa', cursive;
     font-size: 4em;
-    margin-top: 2em;
+    margin-top: 1.5em;
     width: 75%;
+}
+
+
+/****************************************
+        CONTENIDO PRINCIPAL
+****************************************/
+
+/* Estilos de las secciones de texto */
+
+.paragraph {
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: center;
+    width: 30%;
+}
+
+.paragraph h2 {
+    color: hsl(300, 100%, 25%);
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+    position: relative;
+}
+
+.paragraph h2::after {
+    content: '';
+
+    background: hsl(293, 54%, 49%);
+    height: 5px;
+    width: 30%;
+
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+}
+
+.paragraph .highlight-text {
+    color: hsl(300, 100%, 25%);
+    font-weight: bold;
 }
