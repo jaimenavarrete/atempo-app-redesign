@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="wrapper background-container">
+    <div class="background-container main-wrapper">
         <div class="content">
             <header>
                 <figure>
@@ -44,11 +44,67 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fill-opacity="1" d="M0,256L120,266.7C240,277,480,299,720,261.3C960,224,1200,128,1320,80L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
     </div>
 
-    <div class="paragraph welcome">
-        <h2>Te damos la bienvenida a Atempo</h2>
-        <p>Somos una plataforma que <span class="highlight-text">potencia la industria creativa</span> en Centroamérica, posibilitando acceso al aprendizaje musical de calidad y apoyando a artistas regionales a compartir su talento con el mundo.</p>
-        <p>En atempo nos adaptamos a tus exigencias y te ofrecemos una experiencia innovadora de aprender música desde la comodidad de tu hogar.</p>
-        <p class="highlight-text">¿Estás listo?</p>
-    </div>
+    <main>
+        <section class="paragraph welcome">
+            <h2>Te damos la bienvenida a Atempo</h2>
+            <p>Somos una plataforma que <span class="highlight-text">potencia la industria creativa</span> en Centroamérica, posibilitando acceso al aprendizaje musical de calidad y apoyando a artistas regionales a compartir su talento con el mundo.</p>
+            <p>En atempo nos adaptamos a tus exigencias y te ofrecemos una experiencia innovadora de aprender música desde la comodidad de tu hogar.</p>
+            <p class="highlight-text">¿Estás listo?</p>
+        </section>
+    
+        <section class="experts">
+            <header class="background-container title-container">
+                <h2>Conoce a nuestros expertos</h2>
+            </header>
+        
+            <div class="paragraph">
+                <p>Tenemos a tu disposición a músicos de toda Latinoamérica listos para pulir todo tu potencial. ¡Conoce más de su experiencia y talento!.</p>
+                <h2>Nuestros instructores estrella</h2>
+            </div>
+        
+            <section class="experts-cards">
+                <article class="expert-card">
+                    <span class="iconify iconify-quote" data-inline="false" data-icon="bx:bxs-quote-right"></span>
+                    <p>Para mi, aprender música es conectar con lo que las almas sueñan.</p>
+                    <figure>
+                        <img src="./img/random-user-2.jpg" title="Foto de Aby Navarro" alt="Foto de Aby Navarro">
+                        <h3>Aby Navarro</h3>
+                        <h4>Cantante salvadoreña</h4>
+                    </figure>
+        
+                    <!-- Instrumentos -->
+                    <span class="iconify iconify-instrument" data-inline="false" data-icon="mdi:microphone-variant"></span>
+                </article>
+                <article class="expert-card">
+                    <span class="iconify iconify-quote" data-inline="false" data-icon="bx:bxs-quote-right"></span>
+                    <p>El truco está en encontrar la adecuada razón para aprender música.</p>
+                    <figure>
+                        <img src="./img/random-user-1.jpg" title="Foto de Aby Navarro" alt="Foto de Aby Navarro">
+                        <h3>Rodrigo Alemán</h3>
+                        <h4>Cantante y guitarrista salvadoreño</h4>
+                    </figure>
+        
+                    <!-- Instrumentos -->
+                    <span class="iconify iconify-instrument" data-inline="false" data-icon="mdi:microphone-variant"></span>
+                    <span class="iconify iconify-instrument iconify-guitar" data-inline="false" data-icon="fa-solid:guitar"></span>
+                </article>
+            </section>
+
+            <div class="meet-experts">
+                <h3>¡Conócelos!</h3>
+
+                <div class="videos">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/gs3iapslKWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/IRw3tQNCvgw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </body>
 </html>

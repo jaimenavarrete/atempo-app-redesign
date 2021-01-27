@@ -12,7 +12,9 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 .background-container {
     background: url('../img/img-1.jpg');
     background-repeat: no-repeat;
+    background-position-y: center;
     background-size: cover;
+    position: relative;
     z-index: 0;
 }
 
@@ -31,19 +33,17 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
     top: 0;
 }
 
-.wrapper {
-    background-position-y: center;
+.main-wrapper {
     padding-bottom: 12em;
-    position: relative;
 }
 
-.wrapper .content {
+.main-wrapper .content {
     margin: 0 auto;
     max-width: 1520px;
-    width: 100%;
+    width: 90%;
 }
 
-.wrapper svg {
+.main-wrapper svg {
     display: block;
     z-index: -1;
 
@@ -54,30 +54,30 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 
 /* Estilos para la barra de navegacion*/
 
-.wrapper header {
+.main-wrapper header {
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.wrapper header figure {
+.main-wrapper header figure {
     margin: 0;
-    width: 16.9em;
+    width: 15em;
 }
 
-.wrapper header figure img {
+.main-wrapper header figure img {
     width: 100%;
 }
 
-.wrapper header nav ul {
+.main-wrapper header nav ul {
     list-style: none;
 
     display: flex;
     justify-content: space-between;
 }
 
-.wrapper header nav ul li a {
+.main-wrapper header nav ul li a {
     color: hsl(0, 100%, 100%);
     font-weight: bold;
     font-size: .9em;
@@ -86,7 +86,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
     text-decoration: none;
 }
 
-.wrapper header nav ul li a::before {
+.main-wrapper header nav ul li a::before {
     content: '';
 
     background: hsl(0, 100%, 100%);
@@ -99,15 +99,15 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
     bottom: 0;
 }
 
-.wrapper header nav ul li a:hover::before,
-.wrapper header nav ul li .active::before  {
+.main-wrapper header nav ul li a:hover::before,
+.main-wrapper header nav ul li .active::before  {
     left: 0;
     width: 100%;
 }
 
 /* Estilos para el titulo principal*/
 
-.wrapper h1 {
+.main-wrapper h1 {
     color: hsla(0, 100%, 100%);
     font-family: 'Comfortaa', cursive;
     font-size: 4em;
@@ -125,8 +125,10 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 .paragraph {
     line-height: 1.6;
     margin: 0 auto;
+    margin-bottom: 5em;
+    max-width: 37.5em;
     text-align: center;
-    width: 30%;
+    width: 90%;
 }
 
 .paragraph h2 {
@@ -153,4 +155,139 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 .paragraph .highlight-text {
     color: hsl(300, 100%, 25%);
     font-weight: bold;
+}
+
+/* Estilos del titulo de la seccion de conoce a nuestros expertos */
+
+.title-container {
+    background-image: url('./../img/img-2.jpg');
+    margin-bottom: 5em;
+    overflow: auto;
+}
+
+.title-container h2 {
+    color: hsl(0, 100%, 100%);
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5em;
+    margin: 2em 0;
+    padding: 2em 0;
+    position: relative;
+    text-align: center;
+}
+
+.title-container h2::before,
+.title-container h2::after {
+    content: '';
+
+    background: hsl(0, 100%, 100%);
+    height: 5px;
+    width: 10%;
+
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+}
+
+.title-container h2::after {
+    top: 0;
+}
+
+/* Estilos de las tarjetas de las frases de los instructores */
+
+.experts .experts-cards,
+.experts .meet-experts .videos {
+    margin: 0 auto 5em auto;
+    width: 75%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.experts .experts-cards {
+    justify-content: space-around;
+}
+
+.experts .expert-card {
+    border-radius: 10px;
+    box-shadow: 0 0 8px hsl(300, 100%, 25%);
+    max-width: 18.5em;
+    padding: 1.5em 1em;
+    position: relative;
+    text-align: center;
+    width: 90%;
+}
+
+.experts .expert-card p {
+    font-family: 'Comfortaa', cursive;
+}
+
+.experts .expert-card figure img {
+    border: 5px solid hsl(300, 100%, 25%);
+    border-radius: 50%;
+    width: 6.25em;
+}
+
+.experts .expert-card figure h3 {
+    color: hsl(300, 100%, 25%);
+    font-weight: bold;
+    margin-bottom: .25em;
+}
+
+.experts .expert-card figure h4 {
+    color: hsl(0, 0%, 13%);
+    font-weight: normal;
+    font-size: .85em;
+    margin: 0;
+}
+
+.experts .expert-card .iconify {
+    color: hsl(300, 100%, 25%);
+    font-size: 150px;
+}
+
+.experts .expert-card .iconify-quote {
+    font-size: 60px;
+}
+
+.experts .expert-card .iconify-instrument {    
+    position: absolute;
+    bottom: 0;
+    left: -60px;
+}
+
+.experts .expert-card .iconify-guitar {
+    left: calc(100% - 60px);
+}
+
+/* Estilos de la seccion de videos sobre los instructores*/
+
+.experts .meet-experts h3 {
+    color: hsl(300, 100%, 25%);
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+
+.experts .meet-experts .videos {
+    align-items: flex-start;
+}
+
+.experts .meet-experts .videos .video-container {
+    margin-right: 1em;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+}
+
+.experts .meet-experts .videos .video-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 0 4px hsla(0, 0%, 0%, .5);
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
 }
