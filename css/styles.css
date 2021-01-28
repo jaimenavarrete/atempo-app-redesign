@@ -1,4 +1,10 @@
 body {
+    --bg-primary: hsl(300, 100%, 25%);
+    --bg-secondary: hsl(293, 54%, 49%);
+    --bg-tertiary: hsl(286, 100%, 73%);
+
+    --bg-semi-opacity: hsla(300, 100%, 25%, .5);
+
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
@@ -23,7 +29,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 .background-container::before {
     content: '';
 
-    background: hsla(300, 100%, 25%, .5);
+    background: var(--bg-semi-opacity);
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -132,7 +138,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 }
 
 .paragraph h2 {
-    color: hsl(300, 100%, 25%);
+    color: var(--bg-primary);
     font-weight: bold;
     font-size: 2em;
     margin-bottom: 1em;
@@ -143,7 +149,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 .paragraph h2::after {
     content: '';
 
-    background: hsl(293, 54%, 49%);
+    background: var(--bg-secondary);
     height: 5px;
     width: 30%;
 
@@ -153,8 +159,24 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 }
 
 .paragraph .highlight-text {
-    color: hsl(300, 100%, 25%);
+    color: var(--bg-primary);
     font-weight: bold;
+}
+
+.paragraph a {
+    background: var(--bg-secondary);
+    border-radius: 50px;
+    display: inline-block;
+    color: hsl(0, 100%, 100%);
+    font-weight: bold;
+    margin-top: 2em;
+    padding: .5em 2em;
+    text-decoration: none;
+    transition: .2s all ease-out;
+}
+
+.paragraph a:hover {
+    background: var(--bg-primary);
 }
 
 /* Estilos del titulo de la seccion de conoce a nuestros expertos */
@@ -195,7 +217,8 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 /* Estilos de las tarjetas de las frases de los instructores */
 
 .experts .experts-cards,
-.experts .meet-experts .videos {
+.experts .meet-experts .videos,
+.offers .prices-cards {
     margin: 0 auto 5em auto;
     width: 75%;
 
@@ -209,7 +232,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 
 .experts .expert-card {
     border-radius: 10px;
-    box-shadow: 0 0 8px hsl(300, 100%, 25%);
+    box-shadow: 0 0 8px var(--bg-primary);
     max-width: 18.5em;
     padding: 1.5em 1em;
     position: relative;
@@ -222,13 +245,13 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 }
 
 .experts .expert-card figure img {
-    border: 5px solid hsl(300, 100%, 25%);
+    border: 5px solid var(--bg-primary);
     border-radius: 50%;
     width: 6.25em;
 }
 
 .experts .expert-card figure h3 {
-    color: hsl(300, 100%, 25%);
+    color: var(--bg-primary);
     font-weight: bold;
     margin-bottom: .25em;
 }
@@ -241,7 +264,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 }
 
 .experts .expert-card .iconify {
-    color: hsl(300, 100%, 25%);
+    color: var(--bg-primary);
     font-size: 150px;
 }
 
@@ -262,7 +285,7 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
 /* Estilos de la seccion de videos sobre los instructores*/
 
 .experts .meet-experts h3 {
-    color: hsl(300, 100%, 25%);
+    color: var(--bg-primary);
     font-weight: bold;
     font-size: 1.5em;
     margin-bottom: 2.5em;
@@ -290,4 +313,50 @@ ESTILOS DEL HEADER Y DEL TITULO PRINCIPAL
     position: absolute;
     left: 0;
     top: 0;
+}
+
+/* Estilos para la seccion de ofertas */
+
+.offers .title-container {
+    background-image: url('./../img/img-3.jpg');
+}
+
+.offers .prices-cards {
+    justify-content: space-around;
+}
+
+.offers .price-card {
+    border: 3px solid var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0 0 8px hsla(0, 0%, 0%, .5);
+    max-width: 17.5em;
+    text-align: center;
+}
+
+.offers .price-card .price-container {
+    background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+    border-radius: 7px 7px 50% 50%;
+    color: hsl(0, 100%, 100%);
+    font-weight: bold;
+    overflow: auto;
+}
+
+.offers .price-card .title {
+    text-transform: uppercase;
+}
+
+.offers .price-card .original {
+    font-size: .9em;
+    text-decoration: line-through;
+}
+
+.offers .price-card .offer {
+    font-size: 1.5em;
+    margin-top: .5em;
+}
+
+.offers .price-card .description {
+    font-weight: bold;
+    line-height: 1.6;
+    padding: 1em;
 }
